@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+    <style>
+        .logo-text {
+            fill: #A9A9A9;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+        .logo-lines {
+            fill: none;
+            stroke: #000;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+    
+    <!-- M shapes -->
+    <path class="logo-lines" d="M96 81 L126 198 M126 81 L156 198" />
+    <path class="logo-lines" d="M96 81 L126 30 M126 81 L156 30" />
+    
+    <!-- A shapes -->
+    <path class="logo-lines" d="M196 81 L126 198 M196 81 L226 198" />
+    <path class="logo-lines" d="M196 81 L166 30 M196 81 L226 30" />
+    
+    <!-- Text -->
+    <text class="logo-text" x="150" y="120" text-anchor="middle">DOUBLE TECH</text>
+</svg>

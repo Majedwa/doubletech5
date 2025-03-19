@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoubleTech - شركة البرمجة الناشئة</title>
+    
+    <!-- تضمين الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملف الأنماط -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- أيقونة الموقع -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- وصف الموقع للظهور في نتائج البحث -->
+    <meta name="description" content="DoubleTech شركة برمجيات ناشئة تقدم حلول تقنية متطورة تلبي احتياجات السوق المحلي والعالمي. نطور تطبيقات الموبايل ومواقع الويب وحلول الذكاء الاصطناعي">
+</head>
+<body class="page-loading">
+    <!-- شاشة التحميل -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <img src="logo2.png" alt="DoubleTech Logo" class="loader-logo">
+    </div>
+
+    <!-- زر تبديل الوضع الداكن -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع الداكن">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- زر العودة للأعلى -->
+    <button id="back-to-top" class="back-to-top hidden" aria-label="العودة للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- الهيدر -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="logo2.png" alt="DoubleTech Logo" class="logo-img">
+                <span class="logo-text">Double<span class="accent-text">Tech</span></span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about" data-ar="نبذة عنا" data-en="About" data-pt="Sobre">نبذة عنا</a></li>
+                <li><a href="#services" data-ar="خدماتنا" data-en="Services" data-pt="Serviços">خدماتنا</a></li>
+                <li><a href="#projects" data-ar="المشاريع" data-en="Projects" data-pt="Projetos">المشاريع</a></li>
+                <li><a href="#technology" data-ar="التقنيات" data-en="Technology" data-pt="Tecnologia">التقنيات</a></li>
+                <li><a href="#vision" data-ar="رؤيتنا" data-en="Our Vision" data-pt="Nossa Visão">رؤيتنا</a></li>
+                <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact" data-pt="Contato">اتصل بنا</a></li>
+            </ul>
+            <div class="header-controls">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم الترحيب الرئيسي -->
+    <section class="hero animated-gradient">
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="hero-content">
+            <h1 class="reveal-text" data-ar="DoubleTech - شركة البرمجة الناشئة" data-en="DoubleTech - Innovative Software Solutions" data-pt="DoubleTech - Soluções Inovadoras de Software">DoubleTech - شركة البرمجة الناشئة</h1>
+            <p class="reveal-text-delay" data-ar="نقدم حلول تقنية متطورة تلبي احتياجات السوق المحلي والعالمي، مع التركيز على جودة البرمجيات وسهولة الاستخدام" data-en="We provide advanced technical solutions that meet the needs of the local and global market, focusing on software quality and ease of use" data-pt="Fornecemos soluções técnicas avançadas que atendem às necessidades do mercado local e global, com foco na qualidade do software e facilidade de uso">نقدم حلول تقنية متطورة تلبي احتياجات السوق المحلي والعالمي، مع التركيز على جودة البرمجيات وسهولة الاستخدام</p>
+            <div class="hero-buttons reveal-text-delay-2">
+                <a href="#services" class="cta-button pulse-effect" data-ar="خدماتنا" data-en="Our Services" data-pt="Nossos Serviços">خدماتنا</a>
+                <a href="#contact" class="cta-button secondary-cta" data-ar="تواصل معنا" data-en="Contact Us" data-pt="Fale Conosco">تواصل معنا</a>
+            </div>
+            <div class="scroll-indicator">
+                <span data-ar="اسحب للأسفل" data-en="Scroll Down" data-pt="Role para Baixo">اسحب للأسفل</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم النبذة عن الشركة -->
+    <section id="about" class="section">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="نبذة عن DoubleTech" data-en="About DoubleTech" data-pt="Sobre a DoubleTech">نبذة عن DoubleTech</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="DoubleTech هي شركة ناشئة متخصصة في تطوير البرمجيات والتطبيقات، أسسها المستخدم مع شريكه. تهدف الشركة إلى تقديم حلول تقنية متطورة تلبي احتياجات السوق المحلي والعالمي، مع التركيز على جودة البرمجيات وسهولة الاستخدام" data-en="DoubleTech is a startup specializing in software and application development, founded by the user and their partner. The company aims to provide advanced technical solutions that meet the needs of the local and global market, focusing on software quality and ease of use" data-pt="A DoubleTech é uma startup especializada no desenvolvimento de software e aplicativos, fundada pelo usuário e seu parceiro. A empresa visa fornecer soluções técnicas avançadas que atendam às necessidades do mercado local e global, com foco na qualidade do software e facilidade de uso">DoubleTech هي شركة ناشئة متخصصة في تطوير البرمجيات والتطبيقات، أسسها المستخدم مع شريكه. تهدف الشركة إلى تقديم حلول تقنية متطورة تلبي احتياجات السوق المحلي والعالمي، مع التركيز على جودة البرمجيات وسهولة الاستخدام</p>
+        
+        <div class="about-stats">
+            <div class="stat-item fade-in-up delay-2">
+                <div class="stat-icon"><i class="fas fa-code"></i></div>
+                <div class="stat-number" data-count="150">0</div>
+                <div class="stat-label" data-ar="مشروع مكتمل" data-en="Completed Projects" data-pt="Projetos Concluídos">مشروع مكتمل</div>
+            </div>
+            <div class="stat-item fade-in-up delay-3">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number" data-count="75">0</div>
+                <div class="stat-label" data-ar="عميل سعيد" data-en="Happy Clients" data-pt="Clientes Satisfeitos">عميل سعيد</div>
+            </div>
+            <div class="stat-item fade-in-up delay-4">
+                <div class="stat-icon"><i class="fas fa-award"></i></div>
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label" data-ar="جائزة محصّلة" data-en="Awards Won" data-pt="Prêmios Ganhos">جائزة محصّلة</div>
+            </div>
+            <div class="stat-item fade-in-up delay-5">
+                <div class="stat-icon"><i class="fas fa-mug-hot"></i></div>
+                <div class="stat-number" data-count="3500">0</div>
+                <div class="stat-label" data-ar="كوب قهوة" data-en="Cups of Coffee" data-pt="Xícaras de Café">كوب قهوة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="section">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="خدماتنا" data-en="Our Services" data-pt="Nossos Serviços">خدماتنا</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="نقدم مجموعة واسعة من الخدمات التقنية لتلبية احتياجات عملائنا" data-en="We offer a wide range of technical services to meet our clients' needs" data-pt="Oferecemos uma ampla gama de serviços técnicos para atender às necessidades de nossos clientes">نقدم مجموعة واسعة من الخدمات التقنية لتلبية احتياجات عملائنا</p>
+        
+        <div class="services-grid">
+            <div class="service-card fade-in-left">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="تطوير تطبيقات الموبايل" data-en="Mobile App Development" data-pt="Desenvolvimento de Aplicativos Móveis">تطوير تطبيقات الموبايل</h3>
+                    <p data-ar="نستخدم تقنيات مثل Flutter لإنشاء تطبيقات قوية تعمل على Android و iOS" data-en="We use technologies like Flutter to create powerful applications that work on Android and iOS" data-pt="Usamos tecnologias como Flutter para criar aplicativos poderosos que funcionam em Android e iOS">نستخدم تقنيات مثل Flutter لإنشاء تطبيقات قوية تعمل على Android و iOS</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in-right">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="تطوير الويب" data-en="Web Development" data-pt="Desenvolvimento Web">تطوير الويب</h3>
+                    <p data-ar="إنشاء مواقع وتطبيقات ويب حديثة باستخدام Laravel وMySQL وغيرها من التقنيات" data-en="Creating modern websites and web applications using Laravel, MySQL, and other technologies" data-pt="Criação de sites e aplicativos web modernos usando Laravel, MySQL e outras tecnologias">إنشاء مواقع وتطبيقات ويب حديثة باستخدام Laravel وMySQL وغيرها من التقنيات</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in-left">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="تحليل البيانات وقواعد البيانات" data-en="Data Analysis and Databases" data-pt="Análise de Dados e Bancos de Dados">تحليل البيانات وقواعد البيانات</h3>
+                    <p data-ar="العمل مع MongoDB وMySQL لتصميم أنظمة إدارة بيانات فعالة" data-en="Working with MongoDB and MySQL to design effective data management systems" data-pt="Trabalho com MongoDB e MySQL para projetar sistemas eficientes de gerenciamento de dados">العمل مع MongoDB وMySQL لتصميم أنظمة إدارة بيانات فعالة</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in-right">
+                <div class="service-icon"><i class="fas fa-brain"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="الذكاء الاصطناعي وتحليل البيانات" data-en="AI and Data Analysis" data-pt="IA e Análise de Dados">الذكاء الاصطناعي وتحليل البيانات</h3>
+                    <p data-ar="دمج تقنيات الذكاء الاصطناعي في التطبيقات لتعزيز التجربة وتحليل البيانات بشكل أكثر ذكاءً" data-en="Integrating AI technologies into applications to enhance the experience and analyze data more intelligently" data-pt="Integrando tecnologias de IA em aplicativos para melhorar a experiência e analisar dados de forma mais inteligente">دمج تقنيات الذكاء الاصطناعي في التطبيقات لتعزيز التجربة وتحليل البيانات بشكل أكثر ذكاءً</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in-left">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="تطوير حلول متخصصة للشركات" data-en="Specialized Business Solutions" data-pt="Soluções Empresariais Especializadas">تطوير حلول متخصصة للشركات</h3>
+                    <p data-ar="تصميم برامج مخصصة حسب احتياجات العملاء مثل أنظمة إدارة العيادات الطبية والخرائط التفاعلية" data-en="Designing custom software according to customer needs such as medical clinic management systems and interactive maps" data-pt="Projetando software personalizado de acordo com as necessidades do cliente, como sistemas de gerenciamento de clínicas médicas e mapas interativos">تصميم برامج مخصصة حسب احتياجات العملاء مثل أنظمة إدارة العيادات الطبية والخرائط التفاعلية</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card fade-in-right">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <div class="service-content">
+                    <h3 data-ar="الدعم الفني والصيانة" data-en="Technical Support & Maintenance" data-pt="Suporte Técnico e Manutenção">الدعم الفني والصيانة</h3>
+                    <p data-ar="توفير خدمات الدعم الفني والصيانة المستمرة لضمان أداء مثالي لمنتجاتنا" data-en="Providing technical support and ongoing maintenance services to ensure optimal performance of our products" data-pt="Fornecendo serviços de suporte técnico e manutenção contínua para garantir o desempenho ideal de nossos produtos">توفير خدمات الدعم الفني والصيانة المستمرة لضمان أداء مثالي لمنتجاتنا</p>
+                    <a href="#contact" class="service-link" data-ar="استفسر الآن" data-en="Inquire Now" data-pt="Pergunte Agora">استفسر الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع البارزة -->
+    <section id="projects" class="section projects">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="المشاريع البارزة" data-en="Featured Projects" data-pt="Projetos em Destaque">المشاريع البارزة</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="إليك بعض المشاريع التي نفتخر بها" data-en="Here are some projects we are proud of" data-pt="Aqui estão alguns projetos dos quais nos orgulhamos">إليك بعض المشاريع التي نفتخر بها</p>
+        
+        <div class="projects-filter fade-in-up delay-2">
+            <button class="filter-btn active" data-filter="all" data-ar="الجميع" data-en="All" data-pt="Todos">الجميع</button>
+            <button class="filter-btn" data-filter="mobile" data-ar="موبايل" data-en="Mobile" data-pt="Móvel">موبايل</button>
+            <button class="filter-btn" data-filter="web" data-ar="ويب" data-en="Web" data-pt="Web">ويب</button>
+            <button class="filter-btn" data-filter="ai" data-ar="ذكاء اصطناعي" data-en="AI" data-pt="IA">ذكاء اصطناعي</button>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card fade-in-up delay-3" data-category="mobile">
+                <div class="project-image" style="background-color: #60a5fa;">
+                    <div class="project-overlay">
+                        <a href="#projects-modal-1" class="project-link modal-trigger"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-ar="تطبيق خرائط شبيه بـ Waze" data-en="Waze-like Maps Application" data-pt="Aplicativo de Mapas semelhante ao Waze">تطبيق خرائط شبيه بـ Waze</h3>
+                    <p data-ar="يركز على تحسين التنقل داخل فلسطين، مع ميزات تساعد المستخدمين على إيجاد الطرق الأسرع والأكثر أمانًا" data-en="Focuses on improving navigation within Palestine, with features that help users find faster and safer routes" data-pt="Focado em melhorar a navegação dentro da Palestina, com recursos que ajudam os usuários a encontrar rotas mais rápidas e seguras">يركز على تحسين التنقل داخل فلسطين، مع ميزات تساعد المستخدمين على إيجاد الطرق الأسرع والأكثر أمانًا</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">Google Maps API</span>
+                        <span class="project-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in-up delay-4" data-category="mobile">
+                <div class="project-image" style="background-color: #4ade80;">
+                    <div class="project-overlay">
+                        <a href="#projects-modal-2" class="project-link modal-trigger"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-ar="تطبيق Velora" data-en="Velora Application" data-pt="Aplicativo Velora">تطبيق Velora</h3>
+                    <p data-ar="تطبيق سياحي يبرز المسارات الداخلية والمعالم الدينية والطبيعية في فلسطين، باستخدام MongoDB لإدارة البيانات" data-en="A tourism application that highlights internal routes and religious and natural landmarks in Palestine, using MongoDB for data management" data-pt="Um aplicativo de turismo que destaca rotas internas e pontos turísticos religiosos e naturais na Palestina, usando MongoDB para gerenciamento de dados">تطبيق سياحي يبرز المسارات الداخلية والمعالم الدينية والطبيعية في فلسطين، باستخدام MongoDB لإدارة البيانات</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Google Maps</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in-up delay-5" data-category="web">
+                <div class="project-image" style="background-color: #f87171;">
+                    <div class="project-overlay">
+                        <a href="#projects-modal-3" class="project-link modal-trigger"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-ar="نظام إدارة عيادة للأمراض الجلدية" data-en="Dermatology Clinic Management System" data-pt="Sistema de Gestão de Clínica Dermatológica">نظام إدارة عيادة للأمراض الجلدية</h3>
+                    <p data-ar="يشمل إدارة المرضى، الأطباء، المواعيد، التشخيصات، والفواتير، مصمم باستخدام Laravel وMySQL" data-en="Includes patient management, doctors, appointments, diagnoses, and billing, designed using Laravel and MySQL" data-pt="Inclui gerenciamento de pacientes, médicos, consultas, diagnósticos e faturamento, projetado usando Laravel e MySQL">يشمل إدارة المرضى، الأطباء، المواعيد، التشخيصات، والفواتير، مصمم باستخدام Laravel وMySQL</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Laravel</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in-up delay-6" data-category="ai">
+                <div class="project-image" style="background-color: #a78bfa;">
+                    <div class="project-overlay">
+                        <a href="#projects-modal-4" class="project-link modal-trigger"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-ar="نظام تحليل بيانات صحية" data-en="Health Data Analysis System" data-pt="Sistema de Análise de Dados de Saúde">نظام تحليل بيانات صحية</h3>
+                    <p data-ar="نظام تحليل بيانات مبني على تقنيات الذكاء الاصطناعي لمتابعة وتحليل البيانات الصحية للمستخدمين" data-en="Data analysis system based on artificial intelligence techniques to track and analyze user health data" data-pt="Sistema de análise de dados baseado em técnicas de inteligência artificial para rastrear e analisar dados de saúde do usuário">نظام تحليل بيانات مبني على تقنيات الذكاء الاصطناعي لمتابعة وتحليل البيانات الصحية للمستخدمين</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">Google Fit API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-more-container fade-in-up delay-6">
+            <a href="#" class="view-more-btn" data-ar="عرض المزيد من المشاريع" data-en="View More Projects" data-pt="Ver Mais Projetos">عرض المزيد من المشاريع</a>
+        </div>
+    </section>
+
+    <!-- نوافذ تفاصيل المشاريع -->
+    <div id="projects-modal-1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 data-ar="تطبيق خرائط شبيه بـ Waze" data-en="Waze-like Maps Application" data-pt="Aplicativo de Mapas semelhante ao Waze">تطبيق خرائط شبيه بـ Waze</h2>
+            <div class="modal-images">
+                <div class="modal-image" style="background-color: #60a5fa;"></div>
+                <div class="modal-image" style="background-color: #3b82f6;"></div>
+                <div class="modal-image" style="background-color: #2563eb;"></div>
+            </div>
+            <div class="modal-description">
+              <p data-ar="تطبيق خرائط متقدم مشابه لـ Waze، مصمم خصيصًا للمستخدمين في فلسطين. يوفر التطبيق خرائط تفاعلية ومعلومات حركة المرور في الوقت الحقيقي، بالإضافة إلى تحديثات من المستخدمين حول الحواجز والطرق المغلقة. يساعد المستخدمين على إيجاد الطرق الأسرع والأكثر أمانًا للوصول إلى وجهاتهم. يتميز التطبيق بواجهة مستخدم سهلة الاستخدام ويستخدم تقنيات متقدمة مثل Firebase للتزامن في الوقت الحقيقي وخدمات الموقع الجغرافي من Google." data-en="An advanced map application similar to Waze, specifically designed for users in Palestine. The app provides interactive maps and real-time traffic information, plus user updates about checkpoints and closed roads. It helps users find the fastest and safest routes to their destinations. The application features an easy-to-use user interface and uses advanced technologies such as Firebase for real-time synchronization and Google's geolocation services." data-pt="Um aplicativo de mapas avançado semelhante ao Waze, projetado especificamente para usuários na Palestina. O aplicativo fornece mapas interativos e informações de tráfego em tempo real, além de atualizações dos usuários sobre postos de controle e estradas fechadas. Ajuda os usuários a encontrar as rotas mais rápidas e seguras para seus destinos. O aplicativo apresenta uma interface fácil de usar e utiliza tecnologias avançadas, como Firebase para sincronização em tempo real e serviços de geolocalização do Google.">تطبيق خرائط متقدم مشابه لـ Waze، مصمم خصيصًا للمستخدمين في فلسطين. يوفر التطبيق خرائط تفاعلية ومعلومات حركة المرور في الوقت الحقيقي، بالإضافة إلى تحديثات من المستخدمين حول الحواجز والطرق المغلقة. يساعد المستخدمين على إيجاد الطرق الأسرع والأكثر أمانًا للوصول إلى وجهاتهم. يتميز التطبيق بواجهة مستخدم سهلة الاستخدام ويستخدم تقنيات متقدمة مثل Firebase للتزامن في الوقت الحقيقي وخدمات الموقع الجغرافي من Google.</p>
+                <div class="modal-features">
+                    <h3 data-ar="المميزات الرئيسية" data-en="Key Features" data-pt="Principais Recursos">المميزات الرئيسية</h3>
+                    <ul>
+                        <li data-ar="خرائط تفاعلية مع تحديثات في الوقت الحقيقي" data-en="Interactive maps with real-time updates" data-pt="Mapas interativos com atualizações em tempo real">خرائط تفاعلية مع تحديثات في الوقت الحقيقي</li>
+                        <li data-ar="تحديثات من المستخدمين حول الحواجز والطرق المغلقة" data-en="User updates about checkpoints and closed roads" data-pt="Atualizações dos usuários sobre postos de controle e estradas fechadas">تحديثات من المستخدمين حول الحواجز والطرق المغلقة</li>
+                        <li data-ar="حساب الطرق البديلة الأكثر أمانًا" data-en="Calculation of safer alternative routes" data-pt="Cálculo de rotas alternativas mais seguras">حساب الطرق البديلة الأكثر أمانًا</li>
+                        <li data-ar="واجهة مستخدم سهلة الاستخدام" data-en="User-friendly interface" data-pt="Interface amigável ao usuário">واجهة مستخدم سهلة الاستخدام</li>
+                        <li data-ar="دعم لعدة لغات بما في ذلك العربية والإنجليزية" data-en="Support for multiple languages including Arabic and English" data-pt="Suporte para vários idiomas, incluindo árabe e inglês">دعم لعدة لغات بما في ذلك العربية والإنجليزية</li>
+                    </ul>
+                </div>
+                <div class="modal-technologies">
+                    <h3 data-ar="التقنيات المستخدمة" data-en="Technologies Used" data-pt="Tecnologias Utilizadas">التقنيات المستخدمة</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Google Maps API</span>
+                        <span class="tech-tag">Geolocation</span>
+                        <span class="tech-tag">Real-time Database</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects-modal-2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 data-ar="تطبيق Velora" data-en="Velora Application" data-pt="Aplicativo Velora">تطبيق Velora</h2>
+            <div class="modal-images">
+                <div class="modal-image" style="background-color: #4ade80;"></div>
+                <div class="modal-image" style="background-color: #22c55e;"></div>
+                <div class="modal-image" style="background-color: #16a34a;"></div>
+            </div>
+            <div class="modal-description">
+                <p data-ar="تطبيق سياحي مبتكر يهدف إلى إبراز المسارات الداخلية والمعالم الدينية والطبيعية في فلسطين. يوفر التطبيق معلومات مفصلة حول الأماكن السياحية والتاريخية، بالإضافة إلى خرائط تفاعلية ومسارات مقترحة للزوار. يستخدم التطبيق MongoDB لإدارة البيانات مما يوفر مرونة في تخزين المعلومات واسترجاعها بكفاءة. تم تطوير هذا التطبيق كمشروع تخرج ويهدف إلى تعزيز السياحة الداخلية في فلسطين." data-en="An innovative tourism application that aims to highlight internal routes and religious and natural landmarks in Palestine. The app provides detailed information about tourist and historical places, in addition to interactive maps and suggested routes for visitors. The application uses MongoDB for data management, which provides flexibility in storing and retrieving information efficiently. This application was developed as a graduation project and aims to promote domestic tourism in Palestine." data-pt="Um aplicativo de turismo inovador que visa destacar rotas internas e pontos turísticos religiosos e naturais na Palestina. O aplicativo fornece informações detalhadas sobre locais turísticos e históricos, além de mapas interativos e rotas sugeridas para os visitantes. O aplicativo usa MongoDB para gerenciamento de dados, o que proporciona flexibilidade no armazenamento e recuperação de informações com eficiência. Este aplicativo foi desenvolvido como um projeto de graduação e visa promover o turismo doméstico na Palestina.">تطبيق سياحي مبتكر يهدف إلى إبراز المسارات الداخلية والمعالم الدينية والطبيعية في فلسطين. يوفر التطبيق معلومات مفصلة حول الأماكن السياحية والتاريخية، بالإضافة إلى خرائط تفاعلية ومسارات مقترحة للزوار. يستخدم التطبيق MongoDB لإدارة البيانات مما يوفر مرونة في تخزين المعلومات واسترجاعها بكفاءة. تم تطوير هذا التطبيق كمشروع تخرج ويهدف إلى تعزيز السياحة الداخلية في فلسطين.</p>
+                <div class="modal-features">
+                    <h3 data-ar="المميزات الرئيسية" data-en="Key Features" data-pt="Principais Recursos">المميزات الرئيسية</h3>
+                    <ul>
+                        <li data-ar="عرض المعالم السياحية والتاريخية والدينية" data-en="Display of tourist, historical, and religious landmarks" data-pt="Exibição de pontos turísticos, históricos e religiosos">عرض المعالم السياحية والتاريخية والدينية</li>
+                        <li data-ar="خرائط تفاعلية مع مسارات مقترحة" data-en="Interactive maps with suggested routes" data-pt="Mapas interativos com rotas sugeridas">خرائط تفاعلية مع مسارات مقترحة</li>
+                        <li data-ar="معلومات تفصيلية عن كل موقع" data-en="Detailed information about each location" data-pt="Informações detalhadas sobre cada local">معلومات تفصيلية عن كل موقع</li>
+                        <li data-ar="إمكانية حفظ المواقع المفضلة" data-en="Ability to save favorite locations" data-pt="Capacidade de salvar locais favoritos">إمكانية حفظ المواقع المفضلة</li>
+                        <li data-ar="تصنيف المواقع حسب النوع والمنطقة" data-en="Classification of sites by type and region" data-pt="Classificação de sites por tipo e região">تصنيف المواقع حسب النوع والمنطقة</li>
+                    </ul>
+                </div>
+                <div class="modal-technologies">
+                    <h3 data-ar="التقنيات المستخدمة" data-en="Technologies Used" data-pt="Tecnologias Utilizadas">التقنيات المستخدمة</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Google Maps</span>
+                        <span class="tech-tag">RESTful API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects-modal-3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 data-ar="نظام إدارة عيادة للأمراض الجلدية" data-en="Dermatology Clinic Management System" data-pt="Sistema de Gestão de Clínica Dermatológica">نظام إدارة عيادة للأمراض الجلدية</h2>
+            <div class="modal-images">
+                <div class="modal-image" style="background-color: #f87171;"></div>
+                <div class="modal-image" style="background-color: #ef4444;"></div>
+                <div class="modal-image" style="background-color: #dc2626;"></div>
+            </div>
+            <div class="modal-description">
+                <p data-ar="نظام إدارة متكامل لعيادات الأمراض الجلدية يشمل إدارة المرضى، الأطباء، المواعيد، التشخيصات، والفواتير. صمم هذا النظام باستخدام Laravel وMySQL لتوفير واجهة سهلة الاستخدام للأطباء والموظفين. يمكن للنظام تخزين السجلات الطبية للمرضى، وتعقب تقدم العلاج، وجدولة المواعيد، وإصدار الفواتير. يوفر النظام أيضًا لوحة تحكم لمدير العيادة لمراقبة أداء العيادة وتوليد تقارير مختلفة." data-en="An integrated management system for dermatology clinics that includes patient management, doctors, appointments, diagnoses, and billing. This system was designed using Laravel and MySQL to provide an easy-to-use interface for doctors and staff. The system can store medical records for patients, track treatment progress, schedule appointments, and issue invoices. The system also provides a dashboard for the clinic manager to monitor clinic performance and generate various reports." data-pt="Um sistema de gestão integrado para clínicas dermatológicas que inclui gerenciamento de pacientes, médicos, consultas, diagnósticos e faturamento. Este sistema foi projetado usando Laravel e MySQL para fornecer uma interface fácil de usar para médicos e funcionários. O sistema pode armazenar registros médicos de pacientes, acompanhar o progresso do tratamento, agendar consultas e emitir faturas. O sistema também fornece um painel para o gerente da clínica monitorar o desempenho da clínica e gerar vários relatórios.">نظام إدارة متكامل لعيادات الأمراض الجلدية يشمل إدارة المرضى، الأطباء، المواعيد، التشخيصات، والفواتير. صمم هذا النظام باستخدام Laravel وMySQL لتوفير واجهة سهلة الاستخدام للأطباء والموظفين. يمكن للنظام تخزين السجلات الطبية للمرضى، وتعقب تقدم العلاج، وجدولة المواعيد، وإصدار الفواتير. يوفر النظام أيضًا لوحة تحكم لمدير العيادة لمراقبة أداء العيادة وتوليد تقارير مختلفة.</p>
+                <div class="modal-features">
+                    <h3 data-ar="المميزات الرئيسية" data-en="Key Features" data-pt="Principais Recursos">المميزات الرئيسية</h3>
+                    <ul>
+                        <li data-ar="إدارة سجلات المرضى والتاريخ الطبي" data-en="Management of patient records and medical history" data-pt="Gerenciamento de registros de pacientes e histórico médico">إدارة سجلات المرضى والتاريخ الطبي</li>
+                        <li data-ar="جدولة وإدارة المواعيد" data-en="Appointment scheduling and management" data-pt="Agendamento e gerenciamento de consultas">جدولة وإدارة المواعيد</li>
+                        <li data-ar="إصدار وإدارة الفواتير" data-en="Invoice issuance and management" data-pt="Emissão e gerenciamento de faturas">إصدار وإدارة الفواتير</li>
+                        <li data-ar="متابعة تطور الحالات المرضية" data-en="Monitoring the development of medical cases" data-pt="Monitoramento do desenvolvimento de casos médicos">متابعة تطور الحالات المرضية</li>
+                        <li data-ar="توليد تقارير إحصائية وتحليلية" data-en="Generation of statistical and analytical reports" data-pt="Geração de relatórios estatísticos e analíticos">توليد تقارير إحصائية وتحليلية</li>
+                    </ul>
+                </div>
+                <div class="modal-technologies">
+                    <h3 data-ar="التقنيات المستخدمة" data-en="Technologies Used" data-pt="Tecnologias Utilizadas">التقنيات المستخدمة</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects-modal-4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 data-ar="نظام تحليل بيانات صحية" data-en="Health Data Analysis System" data-pt="Sistema de Análise de Dados de Saúde">نظام تحليل بيانات صحية</h2>
+            <div class="modal-images">
+                <div class="modal-image" style="background-color: #a78bfa;"></div>
+                <div class="modal-image" style="background-color: #8b5cf6;"></div>
+                <div class="modal-image" style="background-color: #7c3aed;"></div>
+            </div>
+            <div class="modal-description">
+                <p data-ar="نظام متقدم لتحليل البيانات الصحية باستخدام تقنيات الذكاء الاصطناعي والتعلم الآلي. يقوم النظام بجمع وتحليل البيانات الصحية من الأجهزة القابلة للارتداء ومن تطبيقات اللياقة البدنية من خلال واجهة برمجة تطبيقات Google Fit. يوفر النظام رؤى قيمة حول الأنماط الصحية ويقدم توصيات مخصصة بناءً على تحليل البيانات. يمكن استخدام هذا النظام من قبل المهنيين الصحيين لمراقبة صحة المرضى عن بعد وتحسين جودة الرعاية الصحية." data-en="An advanced health data analysis system using artificial intelligence and machine learning techniques. The system collects and analyzes health data from wearable devices and fitness applications through the Google Fit API. The system provides valuable insights into health patterns and offers personalized recommendations based on data analysis. This system can be used by healthcare professionals to remotely monitor patient health and improve the quality of healthcare." data-pt="Um sistema avançado de análise de dados de saúde usando técnicas de inteligência artificial e aprendizado de máquina. O sistema coleta e analisa dados de saúde de dispositivos vestíveis e aplicativos de fitness por meio da API do Google Fit. O sistema fornece insights valiosos sobre padrões de saúde e oferece recomendações personalizadas com base na análise de dados. Este sistema pode ser usado por profissionais de saúde para monitorar remotamente a saúde do paciente e melhorar a qualidade dos cuidados de saúde.">نظام متقدم لتحليل البيانات الصحية باستخدام تقنيات الذكاء الاصطناعي والتعلم الآلي. يقوم النظام بجمع وتحليل البيانات الصحية من الأجهزة القابلة للارتداء ومن تطبيقات اللياقة البدنية من خلال واجهة برمجة تطبيقات Google Fit. يوفر النظام رؤى قيمة حول الأنماط الصحية ويقدم توصيات مخصصة بناءً على تحليل البيانات. يمكن استخدام هذا النظام من قبل المهنيين الصحيين لمراقبة صحة المرضى عن بعد وتحسين جودة الرعاية الصحية.</p>
+                <div class="modal-features">
+                    <h3 data-ar="المميزات الرئيسية" data-en="Key Features" data-pt="Principais Recursos">المميزات الرئيسية</h3>
+                    <ul>
+                        <li data-ar="تحليل البيانات الصحية باستخدام الذكاء الاصطناعي" data-en="Health data analysis using artificial intelligence" data-pt="Análise de dados de saúde usando inteligência artificial">تحليل البيانات الصحية باستخدام الذكاء الاصطناعي</li>
+                        <li data-ar="تكامل مع الأجهزة القابلة للارتداء وتطبيقات اللياقة البدنية" data-en="Integration with wearable devices and fitness applications" data-pt="Integração com dispositivos vestíveis e aplicativos de fitness">تكامل مع الأجهزة القابلة للارتداء وتطبيقات اللياقة البدنية</li>
+                        <li data-ar="لوحات تحكم تفاعلية لعرض البيانات" data-en="Interactive dashboards for data visualization" data-pt="Painéis interativos para visualização de dados">لوحات تحكم تفاعلية لعرض البيانات</li>
+                        <li data-ar="توصيات مخصصة بناءً على تحليل البيانات" data-en="Personalized recommendations based on data analysis" data-pt="Recomendações personalizadas com base na análise de dados">توصيات مخصصة بناءً على تحليل البيانات</li>
+                        <li data-ar="إمكانية المراقبة عن بعد للمرضى" data-en="Remote patient monitoring capability" data-pt="Capacidade de monitoramento remoto de pacientes">إمكانية المراقبة عن بعد للمرضى</li>
+                    </ul>
+                </div>
+                <div class="modal-technologies">
+                    <h3 data-ar="التقنيات المستخدمة" data-en="Technologies Used" data-pt="Tecnologias Utilizadas">التقنيات المستخدمة</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Google Fit API</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التقنيات -->
+    <section id="technology" class="section">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="التقنيات المستخدمة" data-en="Technologies We Use" data-pt="Tecnologias que Usamos">التقنيات المستخدمة</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="نستخدم أحدث التقنيات لتقديم حلول متطورة وعالية الجودة" data-en="We use the latest technologies to provide advanced and high-quality solutions" data-pt="Usamos as mais recentes tecnologias para fornecer soluções avançadas e de alta qualidade">نستخدم أحدث التقنيات لتقديم حلول متطورة وعالية الجودة</p>
+        
+        <div class="technologies">
+            <div class="tech-category fade-in-up delay-2">
+                <h3 data-ar="تطوير الموبايل" data-en="Mobile Development" data-pt="Desenvolvimento Móvel">تطوير الموبايل</h3>
+                <div class="tech-items">
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-flutter"></i></div>
+                        <p>Flutter</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-react"></i></div>
+                        <p>React Native</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-swift"></i></div>
+                        <p>Swift</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-android"></i></div>
+                        <p>Kotlin</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category fade-in-up delay-3">
+                <h3 data-ar="تطوير الويب" data-en="Web Development" data-pt="Desenvolvimento Web">تطوير الويب</h3>
+                <div class="tech-items">
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-laravel"></i></div>
+                        <p>Laravel</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-react"></i></div>
+                        <p>React</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-vuejs"></i></div>
+                        <p>Vue.js</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                        <p>Node.js</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category fade-in-up delay-4">
+                <h3 data-ar="قواعد البيانات" data-en="Databases" data-pt="Bancos de Dados">قواعد البيانات</h3>
+                <div class="tech-items">
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-database"></i></div>
+                        <p>MySQL</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-leaf"></i></div>
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-server"></i></div>
+                        <p>PostgreSQL</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-fire"></i></div>
+                        <p>Firebase</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category fade-in-up delay-5">
+                <h3 data-ar="خدمات أخرى" data-en="Other Services" data-pt="Outros Serviços">خدمات أخرى</h3>
+                <div class="tech-items">
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <p>Google Maps</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-heartbeat"></i></div>
+                        <p>Google Fit</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                        <p>TensorFlow</p>
+                    </div>
+                    <div class="tech-item glow-on-hover">
+                        <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                        <p>AWS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الرؤية المستقبلية -->
+    <section id="vision" class="vision animated-gradient">
+        <div class="section-decoration"><div></div></div>
+        <div class="vision-content">
+            <h2 class="fade-in-up" data-ar="الرؤية المستقبلية" data-en="Future Vision" data-pt="Visão de Futuro">الرؤية المستقبلية</h2>
+            <p class="fade-in-up delay-1" data-ar="تهدف DoubleTech إلى أن تصبح واحدة من الشركات الرائدة في مجال البرمجة والتطوير في فلسطين، مع التركيز على الابتكار والتقنيات الحديثة. تخطط الشركة لتوسيع نطاق مشاريعها، مثل تطوير أنظمة ذكاء اصطناعي متقدمة وتحليل بيانات أعمق لتقديم حلول أكثر كفاءة" data-en="DoubleTech aims to become one of the leading companies in the field of programming and development in Palestine, focusing on innovation and modern technologies. The company plans to expand the scope of its projects, such as developing advanced artificial intelligence systems and deeper data analysis to provide more efficient solutions" data-pt="A DoubleTech tem como objetivo se tornar uma das empresas líderes na área de programação e desenvolvimento na Palestina, com foco em inovação e tecnologias modernas. A empresa planeja expandir o escopo de seus projetos, como o desenvolvimento de sistemas avançados de inteligência artificial e análise de dados mais profunda para fornecer soluções mais eficientes">تهدف DoubleTech إلى أن تصبح واحدة من الشركات الرائدة في مجال البرمجة والتطوير في فلسطين، مع التركيز على الابتكار والتقنيات الحديثة. تخطط الشركة لتوسيع نطاق مشاريعها، مثل تطوير أنظمة ذكاء اصطناعي متقدمة وتحليل بيانات أعمق لتقديم حلول أكثر كفاءة</p>
+            
+            <div class="vision-goals fade-in-up delay-2">
+                <div class="vision-goal">
+                    <div class="vision-goal-icon"><i class="fas fa-rocket"></i></div>
+                    <h3 data-ar="الابتكار" data-en="Innovation" data-pt="Inovação">الابتكار</h3>
+                    <p data-ar="تطوير حلول مبتكرة وفريدة لتلبية احتياجات السوق المحلي والعالمي" data-en="Developing innovative and unique solutions to meet the needs of local and global markets" data-pt="Desenvolvimento de soluções inovadoras e únicas para atender às necessidades dos mercados locais e globais">تطوير حلول مبتكرة وفريدة لتلبية احتياجات السوق المحلي والعالمي</p>
+                </div>
+                <div class="vision-goal">
+                    <div class="vision-goal-icon"><i class="fas fa-globe"></i></div>
+                    <h3 data-ar="التوسع العالمي" data-en="Global Expansion" data-pt="Expansão Global">التوسع العالمي</h3>
+                    <p data-ar="توسيع نطاق خدماتنا لتصل إلى أسواق عالمية متنوعة من خلال تطوير منتجات ذات معايير دولية" data-en="Expanding our services to reach diverse global markets by developing products with international standards" data-pt="Expandindo nossos serviços para alcançar diversos mercados globais através do desenvolvimento de produtos com padrões internacionais">توسيع نطاق خدماتنا لتصل إلى أسواق عالمية متنوعة من خلال تطوير منتجات ذات معايير دولية</p>
+                </div>
+                <div class="vision-goal">
+                    <div class="vision-goal-icon"><i class="fas fa-users"></i></div>
+                    <h3 data-ar="تنمية المواهب" data-en="Talent Development" data-pt="Desenvolvimento de Talentos">تنمية المواهب</h3>
+                    <p data-ar="بناء فريق من المطورين المهرة وتوفير فرص تدريب للمواهب الشابة في مجال التكنولوجيا" data-en="Building a team of skilled developers and providing training opportunities for young talent in technology" data-pt="Construindo uma equipe de desenvolvedores qualificados e fornecendo oportunidades de treinamento para jovens talentos em tecnologia">بناء فريق من المطورين المهرة وتوفير فرص تدريب للمواهب الشابة في مجال التكنولوجيا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشهادات والتوصيات -->
+    <section id="testimonials" class="section">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="ماذا يقول عنا عملاؤنا" data-en="What Our Clients Say" data-pt="O Que Nossos Clientes Dizem">ماذا يقول عنا عملاؤنا</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="آراء بعض عملائنا الذين قدمنا لهم خدماتنا" data-en="Feedback from some of our clients we've provided services to" data-pt="Feedback de alguns de nossos clientes para os quais prestamos serviços">آراء بعض عملائنا الذين قدمنا لهم خدماتنا</p>
+        
+        <div class="testimonials-slider fade-in-up delay-2">
+            <div class="testimonials-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-ar="لقد عملنا مع DoubleTech على تطوير تطبيق لشركتنا، وقد كانت تجربة رائعة. الفريق محترف للغاية، ملتزم بالمواعيد النهائية ويقدم منتجات عالية الجودة. نوصي بهم بشدة لأي مشروع تقني." data-en="We worked with DoubleTech on developing an application for our company, and it was a great experience. The team is highly professional, committed to deadlines, and delivers high-quality products. We highly recommend them for any technical project." data-pt="Trabalhamos com a DoubleTech no desenvolvimento de um aplicativo para nossa empresa, e foi uma ótima experiência. A equipe é altamente profissional, comprometida com os prazos e entrega produtos de alta qualidade. Recomendamos fortemente para qualquer projeto técnico.">لقد عملنا مع DoubleTech على تطوير تطبيق لشركتنا، وقد كانت تجربة رائعة. الفريق محترف للغاية، ملتزم بالمواعيد النهائية ويقدم منتجات عالية الجودة. نوصي بهم بشدة لأي مشروع تقني.</p>
+                        <div class="testimonial-author">
+                            <h4 data-ar="محمد أحمد" data-en="Mohammed Ahmed" data-pt="Mohammed Ahmed">محمد أحمد</h4>
+                            <p data-ar="مدير شركة الوطنية للمستحضرات الطبية" data-en="Director of National Medical Products" data-pt="Diretor da National Medical Products">مدير شركة الوطنية للمستحضرات الطبية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-ar="ساعدتنا DoubleTech في تطوير موقع الويب الخاص بنا وتحسين تواجدنا على الإنترنت. النتائج تجاوزت توقعاتنا وساهمت في زيادة المبيعات بشكل ملحوظ. هم يفهمون احتياجات الأعمال ويترجمونها إلى حلول تقنية ممتازة." data-en="DoubleTech helped us develop our website and enhance our online presence. The results exceeded our expectations and contributed to a noticeable increase in sales. They understand business needs and translate them into excellent technical solutions." data-pt="A DoubleTech nos ajudou a desenvolver nosso site e melhorar nossa presença online. Os resultados superaram nossas expectativas e contribuíram para um aumento notável nas vendas. Eles entendem as necessidades do negócio e as traduzem em excelentes soluções técnicas.">ساعدتنا DoubleTech في تطوير موقع الويب الخاص بنا وتحسين تواجدنا على الإنترنت. النتائج تجاوزت توقعاتنا وساهمت في زيادة المبيعات بشكل ملحوظ. هم يفهمون احتياجات الأعمال ويترجمونها إلى حلول تقنية ممتازة.</p>
+                        <div class="testimonial-author">
+                            <h4 data-ar="سارة خالد" data-en="Sara Khaled" data-pt="Sara Khaled">سارة خالد</h4>
+                            <p data-ar="مديرة التسويق، شركة أزهار للتجميل" data-en="Marketing Manager, Azhar Beauty Company" data-pt="Gerente de Marketing, Azhar Beauty Company">مديرة التسويق، شركة أزهار للتجميل</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p data-ar="قامت DoubleTech بتطوير نظام إدارة عيادتنا، مما ساعدنا على تحسين كفاءة العمل وتقديم خدمة أفضل للمرضى. الدعم الفني المستمر ممتاز والفريق دائمًا على استعداد للمساعدة في أي مشكلة تواجهنا." data-en="DoubleTech developed our clinic management system, which helped us improve work efficiency and provide better service to patients. The ongoing technical support is excellent, and the team is always ready to help with any problem we face." data-pt="A DoubleTech desenvolveu nosso sistema de gerenciamento de clínica, o que nos ajudou a melhorar a eficiência do trabalho e fornecer um melhor serviço aos pacientes. O suporte técnico contínuo é excelente, e a equipe está sempre pronta para ajudar com qualquer problema que enfrentamos.">قامت DoubleTech بتطوير نظام إدارة عيادتنا، مما ساعدنا على تحسين كفاءة العمل وتقديم خدمة أفضل للمرضى. الدعم الفني المستمر ممتاز والفريق دائمًا على استعداد للمساعدة في أي مشكلة تواجهنا.</p>
+                        <div class="testimonial-author">
+                            <h4 data-ar="د. أحمد محمود" data-en="Dr. Ahmed Mahmoud" data-pt="Dr. Ahmed Mahmoud">د. أحمد محمود</h4>
+                            <p data-ar="مدير عيادة النور للأمراض الجلدية" data-en="Director of Al-Noor Dermatology Clinic" data-pt="Diretor da Clínica Dermatológica Al-Noor">مدير عيادة النور للأمراض الجلدية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-controls">
+                <button class="testimonial-prev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+                <div class="testimonials-dots"></div>
+                <button class="testimonial-next" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="section">
+        <div class="section-decoration"><div></div></div>
+        <h2 class="section-title fade-in-up" data-ar="اتصل بنا" data-en="Contact Us" data-pt="Contate-nos">اتصل بنا</h2>
+        <p class="section-subtitle fade-in-up delay-1" data-ar="نحن هنا للإجابة على استفساراتك وتلبية احتياجاتك" data-en="We are here to answer your inquiries and meet your needs" data-pt="Estamos aqui para responder às suas perguntas e atender às suas necessidades">نحن هنا للإجابة على استفساراتك وتلبية احتياجاتك</p>
+        
+        <div class="contact-container">
+            <div class="contact-info fade-in-left delay-2">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-ar="العنوان" data-en="Address" data-pt="Endereço">العنوان</h3>
+                        <p data-ar="رام الله، فلسطين" data-en="Ramallah, Palestine" data-pt="Ramallah, Palestina">رام الله، فلسطين</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-ar="رقم الهاتف" data-en="Phone Number" data-pt="Número de Telefone">رقم الهاتف</h3>
+                        <p>+972 56 964 0753</p>
+                        <p>+970 59 533 8910</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-ar="البريد الإلكتروني" data-en="Email" data-pt="E-mail">البريد الإلكتروني</h3>
+                        <p>doubletech999@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h3 data-ar="ساعات العمل" data-en="Working Hours" data-pt="Horário de Funcionamento">ساعات العمل</h3>
+                        <p data-ar="الأحد - الخميس: 9:00 صباحًا - 5:00 مساءً" data-en="Sunday - Thursday: 9:00 AM - 5:00 PM" data-pt="Domingo - Quinta: 9:00 - 17:00">الأحد - الخميس: 9:00 صباحًا - 5:00 مساءً</p>
+                    </div>
+                </div>
+                
+                <div class="social-media">
+                    <h3 data-ar="تابعنا على" data-en="Follow Us On" data-pt="Siga-nos em">تابعنا على</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/DoubleTech999" class="social-icon glow-on-hover" aria-label="Facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/doubletech.ps/" class="social-icon glow-on-hover" aria-label="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/doubletech-company/" class="social-icon glow-on-hover" aria-label="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="contact-form" class="fade-in-right delay-2">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="الاسم" data-ar="الاسم" data-en="Name" data-pt="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" data-ar="البريد الإلكتروني" data-en="Email" data-pt="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="الموضوع" data-ar="الموضوع" data-en="Subject" data-pt="Assunto" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="الرسالة" data-ar="الرسالة" data-en="Message" data-pt="Mensagem" required></textarea>
+                </div>
+                <button type="submit" data-ar="إرسال" data-en="Send" data-pt="Enviar">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">
+                <img src="logo2.png" alt="DoubleTech Logo">
+            </a>
+            
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 data-ar="روابط سريعة" data-en="Quick Links" data-pt="Links Rápidos">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-ar="الرئيسية" data-en="Home" data-pt="Início">الرئيسية</a></li>
+                        <li><a href="#about" data-ar="نبذة عنا" data-en="About" data-pt="Sobre">نبذة عنا</a></li>
+                        <li><a href="#services" data-ar="خدماتنا" data-en="Services" data-pt="Serviços">خدماتنا</a></li>
+                        <li><a href="#projects" data-ar="المشاريع" data-en="Projects" data-pt="Projetos">المشاريع</a></li>
+                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact" data-pt="Contato">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-ar="خدماتنا" data-en="Our Services" data-pt="Nossos Serviços">خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-ar="تطوير تطبيقات الموبايل" data-en="Mobile App Development" data-pt="Desenvolvimento de Aplicativos Móveis">تطوير تطبيقات الموبايل</a></li>
+                        <li><a href="#" data-ar="تطوير الويب" data-en="Web Development" data-pt="Desenvolvimento Web">تطوير الويب</a></li>
+                        <li><a href="#" data-ar="الذكاء الاصطناعي" data-en="Artificial Intelligence" data-pt="Inteligência Artificial">الذكاء الاصطناعي</a></li>
+                        <li><a href="#" data-ar="تحليل البيانات" data-en="Data Analysis" data-pt="Análise de Dados">تحليل البيانات</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-ar="تواصل معنا" data-en="Contact Us" data-pt="Contate-nos">تواصل معنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+972569640753" data-ar="هاتف: 0753 964 56 972+" data-en="Phone: +972 56 964 0753" data-pt="Telefone: +972 56 964 0753">هاتف: 0753 964 56 972+</a></li>
+                        <li><a href="tel:+970595338910" data-ar="هاتف: 8910 533 59 970+" data-en="Phone: +970 59 533 8910" data-pt="Telefone: +970 59 533 8910">هاتف: 8910 533 59 970+</a></li>
+                        <li><a href="mailto:doubletech999@gmail.com" data-ar="البريد الإلكتروني: doubletech999@gmail.com" data-en="Email: doubletech999@gmail.com" data-pt="E-mail: doubletech999@gmail.com">البريد الإلكتروني: doubletech999@gmail.com</a></li>
+                        <li><a href="#" data-ar="العنوان: رام الله، فلسطين" data-en="Address: Ramallah, Palestine" data-pt="Endereço: Ramallah, Palestina">العنوان: رام الله، فلسطين</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 data-ar="النشرة الإخبارية" data-en="Newsletter" data-pt="Newsletter">النشرة الإخبارية</h3>
+                    <p data-ar="اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات والعروض" data-en="Subscribe to our newsletter to get the latest updates and offers" data-pt="Inscreva-se em nossa newsletter para receber as últimas atualizações e ofertas">اشترك في نشرتنا الإخبارية للحصول على آخر التحديثات والعروض</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="البريد الإلكتروني" data-ar="البريد الإلكتروني" data-en="Email" data-pt="Email" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://www.facebook.com/DoubleTech999" aria-label="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/doubletech.ps/" aria-label="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/doubletech-company/" aria-label="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" id="copyright" data-ar="جميع الحقوق محفوظة &copy; 2025 DoubleTech | تصميم وتطوير فريق DoubleTech" data-en="All Rights Reserved &copy; 2025 DoubleTech | Designed & Developed by DoubleTech Team" data-pt="Todos os Direitos Reservados &copy; 2025 DoubleTech | Projetado e Desenvolvido pela Equipe DoubleTech">جميع الحقوق محفوظة &copy; 2025 DoubleTech | تصميم وتطوير فريق DoubleTech</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- تضمين ملف جافاسكريبت -->
+    <script src="main.js"></script>
+</body>
+</html>
